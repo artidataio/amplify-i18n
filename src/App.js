@@ -30,7 +30,7 @@ export default function App() {
   return (
     <>
       {languages.map((val) => (
-        <button onClick={() => setLang(val)}>{val}</button>
+        <button key={val} onClick={() => setLang(val)}>{val}</button>
       ))}
       <Authenticator>
         {({ signOut, user }) => (
