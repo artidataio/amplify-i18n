@@ -1,2 +1,3 @@
-# amplify-i18n
-Created with CodeSandbox
+# amplify-I18n
+
+I18n with aws-amplify
