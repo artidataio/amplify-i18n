@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { I18n } from "aws-amplify";
 import { Authenticator, translations } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
@@ -23,14 +23,14 @@ const languages = [
 export default function App() {
   const [lang, setLang] = useState("en");
 
-  useEffect(() => {
-    I18n.setLanguage(lang);
-  }, [lang]);
+  I18n.setLanguage(lang);
 
   return (
     <>
       {languages.map((val) => (
-        <button key={val} onClick={() => setLang(val)}>{val}</button>
+        <button key={val} onClick={() => setLang(val)}>
+          {val}
+        </button>
       ))}
       <Authenticator>
         {({ signOut, user }) => (
